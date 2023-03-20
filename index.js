@@ -1,4 +1,5 @@
 let score = 0;
+let count =-1;
 Data = [
   {
     Question: "Your parents have six sons including you and each son has one sister. How many people are in the family?",
@@ -72,19 +73,21 @@ function functionA() {
     let s = "option" + i;
     document.getElementById(s).innerHTML = Data[a].options[i - 1];
   }
-  console.log(a);
+  
   if (a == 0) {a++};
+  count =30;
 }
 
 function functionB() {
   let s = "Your score is " + score+ "/10";
   document.getElementById("ans").innerHTML = s;
   document.getElementById("ans_block").style.display = "block";
+  clearInterval(myInterval);
 }
 document.getElementById("radio1").addEventListener("click", function () {
   if (a != 0 && a<=9) {
     if (Data[a - 1].options[0] == Data[a - 1].answer) {
-      score++; console.log(Data[a - 1].answer);
+      score++;
     }
     functionA();
     a++;
@@ -92,7 +95,7 @@ document.getElementById("radio1").addEventListener("click", function () {
   }
   else if (a == 10) {
     if (Data[a - 1].options[0] == Data[a - 1].answer) {
-      score++;console.log(Data[a - 1].answer);
+      score++;
     }
     functionB();
     document.getElementById("radio1").checked=false;
@@ -102,7 +105,7 @@ document.getElementById("radio1").addEventListener("click", function () {
 document.getElementById("radio2").addEventListener("click", function () {
     if (a != 0 && a<=9) {
     if (Data[a - 1].options[1] == Data[a - 1].answer) {
-      score++;console.log(Data[a - 1].answer);
+      score++;
     }
     functionA();
     a++;
@@ -110,7 +113,7 @@ document.getElementById("radio2").addEventListener("click", function () {
   }
   else if (a == 10) {
     if (Data[a - 1].options[1] == Data[a - 1].answer) {
-      score++;console.log(Data[a - 1].answer);
+      score++;
     }
     functionB();
     document.getElementById("radio2").checked=false;
@@ -120,7 +123,7 @@ document.getElementById("radio2").addEventListener("click", function () {
 document.getElementById("radio3").addEventListener("click", function () {
     if (a != 0 && a<=9) {
     if (Data[a - 1].options[2] == Data[a - 1].answer) {
-      score++;console.log(Data[a - 1].answer);
+      score++;
     }
     functionA();
     a++;
@@ -128,7 +131,7 @@ document.getElementById("radio3").addEventListener("click", function () {
   }
   else if (a == 10) {
     if (Data[a - 1].options[2] == Data[a - 1].answer) {
-      score++;console.log(Data[a - 1].answer);
+      score++;
     }
     functionB();
     document.getElementById("radio3").checked=false;
@@ -138,7 +141,7 @@ document.getElementById("radio3").addEventListener("click", function () {
 document.getElementById("radio4").addEventListener("click", function () {
     if (a != 0 && a<=9) {
     if (Data[a-1].options[3] == Data[a-1].answer) {
-      score++;console.log(Data[a - 1].answer);
+      score++;
     }
     functionA();
     a++;
@@ -146,9 +149,22 @@ document.getElementById("radio4").addEventListener("click", function () {
   }
   else if (a == 10) {
     if (Data[a - 1].options[3] == Data[a - 1].answer) {
-      score++;console.log(Data[a - 1].answer);
+      score++;
     }
     functionB();
     document.getElementById("radio4").checked=false;
   }
 });
+
+myInterval = setInterval(function() {
+  count--;
+  console.log(count);
+  if(count==0 && a!=10)
+  {
+    functionA();
+    a++;
+  }else if(count ==0 && a==10)
+  {
+    functionB();
+  }
+},1000);
