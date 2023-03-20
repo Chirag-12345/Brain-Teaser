@@ -83,6 +83,8 @@ function functionB() {
   document.getElementById("ans").innerHTML = s;
   document.getElementById("ans_block").style.display = "block";
   clearInterval(myInterval);
+  a++;
+
 }
 document.getElementById("radio1").addEventListener("click", function () {
   if (a != 0 && a<=9) {
@@ -158,7 +160,6 @@ document.getElementById("radio4").addEventListener("click", function () {
 
 myInterval = setInterval(function() {
   count--;
-  console.log(count);
   if(count==0 && a!=10)
   {
     functionA();
