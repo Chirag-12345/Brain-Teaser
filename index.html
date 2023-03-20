@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link
+      rel="stylesheet"
+      href="C:\Users\HP\Desktop\React\Quiz App\style.css"
+    />
+  </head>
+  <body>
+
+    <h1>Brain Teaser</h1>
+        <!--- Box for Question and options-->
+    <div id="Content-box">
+      <div>
+        <h2 id="Question">Game Rules</h2>
+      </div>
+      <div id="options">
+        <ul>
+            <li>
+                <input type="radio" name="ans" id="radio1">
+                <label for="radio1" id="option1">There are total 10 questions</label>
+            </li>
+            <li>
+                <input type="radio" name="ans" id="radio2">
+                <label for="radio2" id="option2">There are four options for each question</label>
+            </li>
+            <li>
+                <input type="radio" name="ans" id="radio3">
+                <label for="radio3" id="option3">Once selected, can't change the answer</label>
+            </li>
+            <li>
+                <input type="radio" name="ans" id="radio4">
+                <label for="radio4" id="option4">There is no time constraint for each question</label>
+            </li>
+        </ul>
+      </div>
+      <div id="Buttons">
+        <button onclick="functionA()" id="btn">Start</button>
+      </div>
+      <div id="ans_block"><p id="ans"></p></div>
+    </div>
+
+    
+    <footer>Developed with ❤️ by Chirag </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
