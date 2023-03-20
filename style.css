@@ -26,6 +26,10 @@ label{
     padding: 10px;
     color:#D5CEA3;
 }
+
+label:hover{
+    background-color:#37306B;
+}
 #Content-box{
     margin: 30px auto 30px auto;
     width: 60%;
@@ -61,3 +65,4 @@ footer {
     margin: 10px auto;
     font-size: 16px;
 }
+
