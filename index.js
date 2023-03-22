@@ -50,7 +50,7 @@ Data = [
 },
 
 {
-    Question :"100 cowboys are standing in a circle and are numbered from number 1 to 100. A deadly game is created in which the first person will shoot the next person (i.e.second person) and then need to pass the gun to the next person (i.e. Third person) and he will shoot the person to the next. This game will continue until one cowboy stays alive.Which cowboy will survive at the end?",
+    Question :"100 men are standing in a circle and are numbered from number 1 to 100. A game is created in which the first person will shoot the next person (i.e.second person) and then need to pass the gun to the next person (i.e. Third person) and he will shoot the person to the next. This game will continue until one man stays alive.Which man will survive at the end?",
     options: ["Fifty", "Ninety One", "Fifty", "Seventy three"],
     answer: "Seventy three",
 },
