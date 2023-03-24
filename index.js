@@ -56,7 +56,7 @@ Data = [
 },
 
 {
-    Question :"How much time you invested in the game?",
+    Question :"How much time did you invest in the game?",
     options: ["Zero","Three minutes","One minute","Five minutes"],
     answer: "Five minutes"
 }
